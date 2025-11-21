@@ -1,52 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ali ki Famous Nihari</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Not Famous Nihari</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- Top Bar -->
-  <header>
-    <div class="top-bar">
-      <button class="location-btn">📍 Change Location</button>
-      <span class="contact">📞 0213-9433111</span>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <span class="brand-text">Not Famous Nihari</span>
+      </a>
+
+      <input id="nav-toggle" type="checkbox">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#order">Order</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="logo">🍲 ALI KI FAMOUS NIHARI</div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-text">
-      <h2><span class="script">Savor</span> <span class="highlight">NIHARI’s</span></h2>
-      <p class="sub-text">MELTING DELIGHT</p>
-    </div>
-    <div class="hero-image">
-      <img src="nihari-bowl.png" alt="Nihari Bowl">
-    </div>
-    <div class="brand">
-      <div class="brand-logo">🍲</div>
-      <h3>Ali ki Famous Nihari</h3>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Not Famous Nihari</h1>
+        <p class="lead">Authentic slow-cooked Nihari & desi dishes with real Karachi taste.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#menu">Explore Menu</a>
+          <a class="btn btn-outline" href="#order">Order Now</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6IdpasUi8om6tPBEI2QBcN1NSPZtnerDuww&s0" alt="Nihari bowl">
+      </div>
     </div>
   </section>
 
-  <!-- Bottom Menu -->
-  <footer>
-    <ul class="menu">
-      <li>Nihari</li>
-      <li>Haleem</li>
-      <li>Biryani / Pulao</li>
-      <li>Tandoor</li>
-      <li>Soft Drink</li>
-      <li>Tin Pack</li>
-    </ul>
+  <!-- MENU -->
+  <section id="menu" class="menu-section container">
+    <h2>Our Menu</h2>
+    <p class="section-sub">Fresh, hot & flavorful — cooked daily.</p>
 
-    <!-- Search Bar -->
-    <div class="search-bar">
-      <input type="text" placeholder="Search for item by title...">
-      <button>🔍</button>
+    <div class="cards-grid">
+
+      <article class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqY19myM91L0QgByq10NuTOdyWG6eIBKz4jg&s0" alt="Nihari">
+        <div class="card-body">
+          <h3>Beef Nihari</h3>
+          <p>Traditional slow-cooked beef with rich spices.</p>
+          <div class="price">₨ 650</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2QIUGbNg03TwMqpnGAvKY5ls7BZDyazz7qw&s" alt="Haleem">
+        <div class="card-body">
+          <h3>Haleem</h3>
+          <p>Thick, creamy & flavorful — a Karachi favorite.</p>
+          <div class="price">₨ 500</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCD_MwlsmpT3srx8HNMqYXR7TNKmTb9sCR6w&s0" alt="Karahi">
+        <div class="card-body">
+          <h3>Chicken Karahi</h3>
+          <p>Fresh chicken cooked in tomato & chili base.</p>
+          <div class="price">₨ 750</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJjtEHocmcTO20zL7-zQ_obKDR9mry_WgGjQ&s0" alt="Naan">
+        <div class="card-body">
+          <h3>Fresh Naan</h3>
+          <p>Soft, hot tandoor naan baked to perfection.</p>
+          <div class="price">₨ 30</div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ORDER -->
+  <section id="order" class="order-section container">
+    <h2>Order Online</h2>
+    <p class="section-sub">Simple & fast — call or place order online.</p>
+
+    <div class="order-grid">
+      <form class="order-form" onsubmit="return false;">
+        <label>Name
+          <input type="text" required>
+        </label>
+        <label>Phone
+          <input type="tel" required>
+        </label>
+        <label>Order Items
+          <textarea required></textarea>
+        </label>
+        <label>Pickup / Delivery
+          <select>
+            <option>Pickup</option>
+            <option>Delivery</option>
+          </select>
+        </label>
+        <button class="btn btn-primary">Place Order</button>
+      </form>
+
+      <div class="order-info">
+        <h3>Contact Info</h3>
+        <p><strong>Phone:</strong> 0300-1234567</p>
+        <p><strong>Address:</strong> Saddar, Karachi</p>
+
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps/place/Korangi,+Karachi,+Pakistan"
+            loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery-section container">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?q=80&w=700">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCD_MwlsmpT3srx8HNMqYXR7TNKmTb9sCR6w&s0">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2QIUGbNg03TwMqpnGAvKY5ls7BZDyazz7qw&s0">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJjtEHocmcTO20zL7-zQ_obKDR9mry_WgGjQ&s0">
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section container">
+    <h2>Contact Us</h2>
+    <p>For orders, catering or bulk booking call <strong>0300-1234567</strong>.</p>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Not Famous Nihari.</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
